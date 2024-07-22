@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+  opacity: 1;
+  position: relative;
+
+}
+
+.toppingInclude{
+  opacity: 1;
+  position: relative;
+}
+.toppingInclude::before{
+  content: '>';
+  position: absolute;
+  top: -2px;
+  left: -1.25rem;
+  transform: scale(0.8, 1);
+  display: inline-block;
+
+}
+.active::before{
+  content: '>';
+  position: absolute;
+  top: -2px;
+  left: -1.25rem;
+  transform: scale(0.8, 1);
+  display: inline-block;
+
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .main-bg{
+    background: radial-gradient(circle, rgba(128,90,213), rgb(118, 5, 163));
+
+  }
+  
+
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-6 sm:py-16 py-10;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-6;
+  }
+
+  .padding-y {
+    @apply sm:py-16 py-6;
+  }
+}
